@@ -1,8 +1,8 @@
-# AlmaLinux Docker Images with ansible and systemd
+# RockyLinux Docker Images with ansible and systemd
 
 ![Build](https://github.com/hybridadmin/docker-ansible-rockylinux/workflows/Build/badge.svg?branch=main) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-rockylinux)
 
-> AlmaLinux Docker images to be used for testing ansible playbooks and roles.
+> RockyLinux Docker images to be used for testing ansible playbooks and roles.
 
 ## Quick reference
 
