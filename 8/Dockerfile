@@ -16,7 +16,6 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install requirements.
-#RUN dnf -y install rpm centos-release dnf-plugins-core \
 RUN dnf -y update \
  && dnf --enablerepo=powertools -y install \
       epel-release \
