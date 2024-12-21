@@ -1,6 +1,6 @@
 # RockyLinux Docker Images with ansible and systemd
 
-![Build](https://github.com/hybridadmin/docker-ansible-rockylinux/workflows/Build/badge.svg?branch=main) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-rockylinux)
+![Build](https://img.shields.io/github/actions/workflow/status/hybridadmin/docker-ansible-rockylinux/build.yml) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-rockylinux)
 
 > RockyLinux Docker images to be used for testing ansible playbooks and roles.
 
@@ -36,7 +36,7 @@ docker pull hybridadmin/ansible-rockylinux:latest
 Run a container using the image with the following command:
 
 ```console
-docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro hybridadmin/ansible-rockylinux:latest
+docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:rw --cgroupns=host hybridadmin/ansible-rockylinux:latest
 ```
 
 Use ansible inside the container:
