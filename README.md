@@ -13,7 +13,8 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest`, `9`](https://github.com/hybridadmin/docker-ansible-rockylinux/tree/main/9/Dockerfile)
+- [`latest`, `10`](https://github.com/hybridadmin/docker-ansible-rockylinux/tree/main/10/Dockerfile)
+- [`9`](https://github.com/hybridadmin/docker-ansible-rockylinux/tree/main/9/Dockerfile)
 - [`8`](https://github.com/hybridadmin/docker-ansible-rockylinux/tree/main/8/Dockerfile)
 
 ## How to Build the image

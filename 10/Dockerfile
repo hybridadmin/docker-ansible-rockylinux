@@ -1,4 +1,4 @@
-FROM rockylinux:9
+FROM rockylinux/rockylinux:10-ubi-init
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
 
 ENV container=docker
@@ -14,9 +14,9 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install requirements.
-RUN yum -y install rpm dnf-plugins-core \
- && yum -y update \
- && yum -y install \
+RUN dnf -y install rpm dnf-plugins-core \
+ && dnf -y update \
+ && dnf -y install \
       epel-release \
       initscripts \
       sudo \
@@ -25,9 +25,9 @@ RUN yum -y install rpm dnf-plugins-core \
       libyaml \
       python3 \
       python3-pip \
-      python3-pyyaml \
+#      python3-pyyaml \
       iproute \
- && yum clean all
+ && dnf clean all
 
 # Upgrade pip to latest version.
 RUN pip3 install --upgrade pip

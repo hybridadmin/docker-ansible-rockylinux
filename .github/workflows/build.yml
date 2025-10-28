@@ -13,15 +13,21 @@ jobs:
           - image: rockylinux
             version: "8"
             tags: "8"
+            platform: "linux/amd64"
           - image: rockylinux
             version: "9"
-            tags: "9,latest"
+            tags: "9"
+            platform: "linux/amd64,linux/arm64"
+          - image: rockylinux
+            version: "10"
+            tags: "10,latest"
+            platform: "linux/amd64,linux/arm64"
     uses: hybridadmin/reuse-workflows/.github/workflows/build_push.yml@main
     secrets: inherit
     with:
       distro_image: '${{ matrix.distro.image }}'
       distro_tags: '${{ matrix.distro.tags }}'
-      distro_platform: 'linux/amd64,linux/arm64'
+      distro_platform: '${{ matrix.distro.platform }}'
       distro_version: '${{ matrix.distro.version }}'
 
   run_update_readme:
